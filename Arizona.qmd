@@ -28,6 +28,8 @@ myapikey <- "7ec164ce2e6d7eff05a3da72fa85dec41773e398"
 census_api_key(myapikey, overwrite = TRUE)
 ```
 
+Packages are installed so that the maps can be generated
+
 ## Arizona Code
 
 ### Median Age Test
