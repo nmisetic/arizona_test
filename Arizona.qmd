@@ -8,7 +8,19 @@ editor: visual
 ## Packages
 
 ```{r}
-
+library(tidyverse)
+library(tigris)
+library(sf)
+library(tidycensus)
+library (dplyr)
+library (ggplot2)
+library(htmltools)
+library(janitor)
+library(here)
+library(mapview)
+library(leafsync)
+library(leaflet.extras2)
+options(tigris_class = "sf")
 ```
 
 ## Arizona Code
