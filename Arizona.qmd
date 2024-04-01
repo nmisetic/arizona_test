@@ -5,7 +5,7 @@ format: html
 editor: visual
 ---
 
-## Packages
+## Background Packages
 
 ```{r}
 library(tidyverse)
@@ -26,33 +26,4 @@ options(tigris_class = "sf")
 ```{r}
 myapikey <- "7ec164ce2e6d7eff05a3da72fa85dec41773e398"
 census_api_key(myapikey, overwrite = TRUE)
-```
-
-Packages are installed so that the maps can be generated
-
-## Arizona Code
-
-### Median Age Test
-
-```{r}
-arizona_voters_age <- get_acs(
-  geography = 'tract',
-  variables = c( 
-    median_age = 'B01002A_001'
-  ),
-  state = 'AZ',
-  output = "wide",
-  geometry = TRUE
-)
-```
-
-```{r}
-arizona_voters_age <- arizona_voters_age %>%
-  select(-ends_with("M"))
-
-colnames(arizona_voters_age) <- sub("E$", "", colnames(arizona_voters_age))
-```
-
-```{r}
-mapview(arizona_voters_age, zcol = "median_age")
 ```

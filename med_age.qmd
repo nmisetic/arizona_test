@@ -1,0 +1,30 @@
+---
+title: "Median Age"
+format: html
+editor: visual
+---
+
+## Median Age Map
+
+```{r}
+arizona_voters_age <- get_acs(
+  geography = 'tract',
+  variables = c( 
+    median_age = 'B01002A_001'
+  ),
+  state = 'AZ',
+  output = "wide",
+  geometry = TRUE
+)
+```
+
+```{r}
+arizona_voters_age <- arizona_voters_age %>%
+  select(-ends_with("M"))
+
+colnames(arizona_voters_age) <- sub("E$", "", colnames(arizona_voters_age))
+```
+
+```{r}
+mapview(arizona_voters_age, zcol = "median_age")
+```
