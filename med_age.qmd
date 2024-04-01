@@ -50,4 +50,4 @@ colnames(arizona_voters_age) <- sub("E$", "", colnames(arizona_voters_age))
 mapview(arizona_voters_age, zcol = "median_age")
 ```
 
-Back
+[Back](https://nmisetic.github.io/arizona_test/)
