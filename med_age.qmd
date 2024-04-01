@@ -6,7 +6,7 @@ editor: visual
 
 ## Median Age Map
 
-```{r}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(tigris)
 library(sf)
@@ -22,12 +22,12 @@ library(leaflet.extras2)
 options(tigris_class = "sf")
 ```
 
-```{r}
+```{r setup, include=FALSE}
 myapikey <- "7ec164ce2e6d7eff05a3da72fa85dec41773e398"
 census_api_key(myapikey, overwrite = TRUE)
 ```
 
-```{r}
+```{r setup, include=FALSE}
 arizona_voters_age <- get_acs(
   geography = 'tract',
   variables = c( 
@@ -39,7 +39,7 @@ arizona_voters_age <- get_acs(
 )
 ```
 
-```{r}
+```{r setup, include=FALSE}
 arizona_voters_age <- arizona_voters_age %>%
   select(-ends_with("M"))
 
