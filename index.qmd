@@ -1,0 +1,13 @@
+---
+title: "Home Page"
+format: html
+editor: visual
+---
+
+## Preface
+
+This is a test website analyzing the state of Arizona and its demographic breakdowns. You can find different interactive maps below
+
+## Maps
+
+Median Age
