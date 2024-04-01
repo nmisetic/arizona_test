@@ -10,4 +10,4 @@ This is a test website analyzing the state of Arizona and its demographic breakd
 
 ## Maps
 
-Median Age
+[Median Age](https://nmisetic.github.io/arizona_test/med_age.html)
